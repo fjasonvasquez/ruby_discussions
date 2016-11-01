@@ -15,3 +15,7 @@ dec_tree = DecisionTree::ID3.new(attributes, training, 'sick', :continuous)
 dec_tree.train 
 
 test = [98.7, 'healthy']
+
+decision = dec_tree.predict(test)
+puts "Prediction: #{decision}"
+puts "Reality: #{test.last}"
